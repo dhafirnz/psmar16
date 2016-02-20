@@ -1,0 +1,10 @@
+psmar16-dev-postgresql:
+  container_name: psmar16-dev-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/psmar16/dev-postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=psmar16
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"
