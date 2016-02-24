@@ -22,10 +22,10 @@ spring:
         driver-class-name: org.h2.jdbcx.JdbcDataSource
         url: jdbc:h2:file:./target/h2db/db/practicescribe;DB_CLOSE_DELAY=-1
         name:
-        username: 
+        username:
         password:
     jpa:
-        database-platform: nz.co.threepoints.ps.core.domain.util.FixedH2Dialect
+        database-platform: nz.co.threepoints.ps.domain.util.FixedH2Dialect
         database: H2
         show_sql: true
         properties:
