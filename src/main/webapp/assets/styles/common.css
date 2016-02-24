@@ -1,0 +1,42 @@
+.module-product{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-product.png") no-repeat center bottom;
+    background-size: contain;}
+
+.module-calendar{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-calendar.png") no-repeat center bottom;
+    background-size: contain;}
+
+.module-client{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-client.gif") no-repeat center bottom;
+    background-size: contain;}
+
+.module-service{
+    display: inline-block;
+    width: 170px;
+    height: 250px;
+    background: url("../images/modules/module-service.png") no-repeat center bottom;
+    background-size: contain;}
+
+.practicescribe{
+    display: inline-block;
+    width: 450px;
+    height: 400px;
+    background: url("../images/practicescribe.jpg") no-repeat center top;
+    background-size: contain;}
+
+.threepoints-logo{
+    display: inline-block;
+    width: 320px;
+    height: 60px;
+    background: url("../images/threepoints-logo.png") no-repeat center ;
+    background-size: contain;}
+

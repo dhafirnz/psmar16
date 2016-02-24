@@ -15,6 +15,8 @@
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="stylesheet" href="assets/styles/common.css">
+
         <!-- endbuild -->
     </head>
     <body ng-app="psmar16App">
@@ -27,7 +29,7 @@
             <div class="well" ui-view="content"></div>
 
             <div class="footer">
-                <p translate="footer">This is your footer</p>
+                <p>Threepoints (TM) - 2016</p>
             </div>
         </div>
 
@@ -182,5 +184,8 @@
     <script src="scripts/components/entities/client/client.service.js"></script>
     <script src="scripts/components/entities/client/client.search.service.js"></script>
     <!-- endbuild -->
+    <!-- Custome -->
+    <script src="scripts/app/landing/landing-modules.js"></script>
+    <script src="scripts/app/product/product.js"></script>
 </body>
 </html>

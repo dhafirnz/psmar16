@@ -18,7 +18,8 @@ angular.module('psmar16App')
                 if ($rootScope.previousStateName === 'register') {
                     $state.go('home');
                 } else {
-                    $rootScope.back();
+                    //$rootScope.back();
+                    $state.go('modulegrid');
                 }
             }).catch(function () {
                 $scope.authenticationError = true;
