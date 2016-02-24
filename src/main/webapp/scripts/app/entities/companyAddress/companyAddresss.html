@@ -1,0 +1,88 @@
+<div>
+    <h2 translate="psmar16App.companyAddress.home.title">CompanyAddresss</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="companyAddress.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="psmar16App.companyAddress.home.createLabel">Create new CompanyAddress
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'psmar16App.companyAddress.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="psmar16App.companyAddress.addressLine1">AddressLine1</span></th>
+                    <th><span translate="psmar16App.companyAddress.addressLine2">AddressLine2</span></th>
+                    <th><span translate="psmar16App.companyAddress.suburb">Suburb</span></th>
+                    <th><span translate="psmar16App.companyAddress.town">Town</span></th>
+                    <th><span translate="psmar16App.companyAddress.city">City</span></th>
+                    <th><span translate="psmar16App.companyAddress.postcode">Postcode</span></th>
+                    <th><span translate="psmar16App.companyAddress.state">State</span></th>
+                    <th><span translate="psmar16App.companyAddress.country">Country</span></th>
+                    <th><span translate="psmar16App.companyAddress.type">Type</span></th>
+                    <th><span translate="psmar16App.companyAddress.company">company</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="companyAddress in companyAddresss track by companyAddress.id">
+                    <td><a ui-sref="companyAddress.detail({id:companyAddress.id})">{{companyAddress.id}}</a></td>
+                    <td>{{companyAddress.addressLine1}}</td>
+                    <td>{{companyAddress.addressLine2}}</td>
+                    <td>{{companyAddress.suburb}}</td>
+                    <td>{{companyAddress.town}}</td>
+                    <td>{{companyAddress.city}}</td>
+                    <td>{{companyAddress.postcode}}</td>
+                    <td>{{companyAddress.state}}</td>
+                    <td>{{companyAddress.country}}</td>
+                    <td translate="{{'psmar16App.AddressType.' + companyAddress.type}}">{{companyAddress.type}}</td>
+                    <td>
+                        <a ui-sref="company.detail({id:companyAddress.company.id})">{{companyAddress.company.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="companyAddress.detail({id:companyAddress.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="companyAddress.edit({id:companyAddress.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="companyAddress.delete({id:companyAddress.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+{
+    "psmar16App": {
+        "AddressType" : {
+            "null": "",
+            "PHYSICAL_ADDRESS": "PHYSICAL_ADDRESS",
+            "POSTAL_ADDRESS": "POSTAL_ADDRESS",
+            "BILLING_ADDRESS": "BILLING_ADDRESS"
+        }
+    }
+}

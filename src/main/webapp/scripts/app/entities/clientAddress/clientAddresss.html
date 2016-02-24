@@ -1,0 +1,88 @@
+<div>
+    <h2 translate="psmar16App.clientAddress.home.title">ClientAddresss</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="clientAddress.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="psmar16App.clientAddress.home.createLabel">Create new ClientAddress
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'psmar16App.clientAddress.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="psmar16App.clientAddress.addressLine1">AddressLine1</span></th>
+                    <th><span translate="psmar16App.clientAddress.addressLine2">AddressLine2</span></th>
+                    <th><span translate="psmar16App.clientAddress.suburb">Suburb</span></th>
+                    <th><span translate="psmar16App.clientAddress.town">Town</span></th>
+                    <th><span translate="psmar16App.clientAddress.city">City</span></th>
+                    <th><span translate="psmar16App.clientAddress.postcode">Postcode</span></th>
+                    <th><span translate="psmar16App.clientAddress.state">State</span></th>
+                    <th><span translate="psmar16App.clientAddress.country">Country</span></th>
+                    <th><span translate="psmar16App.clientAddress.type">Type</span></th>
+                    <th><span translate="psmar16App.clientAddress.client">client</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="clientAddress in clientAddresss track by clientAddress.id">
+                    <td><a ui-sref="clientAddress.detail({id:clientAddress.id})">{{clientAddress.id}}</a></td>
+                    <td>{{clientAddress.addressLine1}}</td>
+                    <td>{{clientAddress.addressLine2}}</td>
+                    <td>{{clientAddress.suburb}}</td>
+                    <td>{{clientAddress.town}}</td>
+                    <td>{{clientAddress.city}}</td>
+                    <td>{{clientAddress.postcode}}</td>
+                    <td>{{clientAddress.state}}</td>
+                    <td>{{clientAddress.country}}</td>
+                    <td translate="{{'psmar16App.AddressType.' + clientAddress.type}}">{{clientAddress.type}}</td>
+                    <td>
+                        <a ui-sref="client.detail({id:clientAddress.client.id})">{{clientAddress.client.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="clientAddress.detail({id:clientAddress.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="clientAddress.edit({id:clientAddress.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="clientAddress.delete({id:clientAddress.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

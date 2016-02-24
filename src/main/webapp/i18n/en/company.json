@@ -1,0 +1,33 @@
+{
+    "psmar16App": {
+        "company" : {
+            "home": {
+                "title": "Companys",
+                "createLabel": "Create a new Company",
+                "createOrEditLabel": "Create or edit a Company",
+                "search": "Search for Company"
+            },
+            "created": "A new Company is created with identifier {{ param }}",
+            "updated": "A Company is updated with identifier {{ param }}",
+            "deleted": "A Company is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Company {{ id }}?"
+            },
+            "detail": {
+                "title": "Company"
+            },
+            "code": "Code",
+            "name": "Name",
+            "phone": "Phone",
+            "tollPhone": "TollPhone",
+            "mobile": "Mobile",
+            "email": "Email",
+            "status": "Status",
+            "startDate": "StartDate",
+            "endDate": "EndDate",
+            "address": "Address",
+            "Module": "Module",
+            "client": "Client"
+        }
+    }
+}

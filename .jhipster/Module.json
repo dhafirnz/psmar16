@@ -1,0 +1,52 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "Company",
+      "otherEntityName": "company",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "module"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength",
+        "minlength"
+      ],
+      "fieldValidateRulesMaxlength": 20,
+      "fieldValidateRulesMinlength": 5
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength",
+        "minlength"
+      ],
+      "fieldValidateRulesMaxlength": 100,
+      "fieldValidateRulesMinlength": 5
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "resource",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 100
+    }
+  ],
+  "changelogDate": "20160220023526",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "javadoc": "Module"
+}

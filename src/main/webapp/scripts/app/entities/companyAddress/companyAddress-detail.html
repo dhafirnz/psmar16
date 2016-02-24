@@ -1,0 +1,102 @@
+
+<div>
+    <h2><span translate="psmar16App.companyAddress.detail.title">CompanyAddress</span> {{companyAddress.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.addressLine1">AddressLine1</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.addressLine1}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.addressLine2">AddressLine2</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.addressLine2}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.suburb">Suburb</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.suburb}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.town">Town</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.town}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.city">City</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.city}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.postcode">Postcode</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.postcode}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.state">State</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.state}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.country">Country</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{companyAddress.country}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.type">Type</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'psmar16App.AddressType.' + companyAddress.type}}">{{companyAddress.type}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.companyAddress.company">company</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="company.detail({id:companyAddress.company.id})">{{companyAddress.company.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

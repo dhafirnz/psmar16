@@ -1,0 +1,86 @@
+/**
+* Module
+*/
+entity Module{
+	code String required maxlength(20) minlength(5),
+	name String required maxlength(100) minlength(5),
+	resource String maxlength(100)
+}
+
+/**
+* Company has M2M to Module, M2M to Address, O2M to Clients
+* 
+*/
+enum CompanyStatus {
+	INACTIVE, ACTIVE, SUSPENDED
+}
+enum AddressType{
+	PHYSICAL_ADDRESS,POSTAL_ADDRESS,BILLING_ADDRESS
+}
+
+entity CompanyAddress {
+	addressLine1 String maxlength(100),
+	addressLine2 String maxlength(100),	
+	suburb String maxlength(30),
+	town String maxlength(30),
+	city String  maxlength(30),
+	postcode String  maxlength(8),
+	state String  maxlength(30),
+	country String maxlength(30),
+	type AddressType
+}
+entity Company {
+	code String required maxlength(20) minlength(5),
+	name String required maxlength(100) minlength(5),
+	phone String required maxlength(20),
+	tollPhone String maxlength(20),
+	mobile String  maxlength(20),
+	email String maxlength(50) minlength(5) pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"),	
+	status CompanyStatus required,
+	startDate LocalDate required,
+	endDate LocalDate
+}
+
+relationship OneToMany {
+  Company{address} to CompanyAddress{company}
+}
+
+relationship ManyToMany {
+  Company{Module(name)} to Module{Company(name)}
+}
+
+enum SaluteType{
+	MR,MRS,MISS,MS
+}
+
+entity ClientAddress {
+	addressLine1 String maxlength(100),
+	addressLine2 String maxlength(100),	
+	suburb String maxlength(30),
+	town String maxlength(30),
+	city String  maxlength(30),
+	postcode String  maxlength(8),
+	state String  maxlength(30),
+	country String maxlength(30),
+	type AddressType
+}
+
+entity Client {
+	salute SaluteType,
+	firstName String  required maxlength(30),
+	lastName String  required maxlength(30),	
+	phone String required maxlength(20) ,	
+	mobile String maxlength(20) ,
+	email String maxlength(50) minlength(5) pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+}
+
+relationship OneToMany {
+  Client{address} to ClientAddress{Client(fullName)}
+}
+
+relationship OneToMany {
+  Company{Client(fullName)} to Client{Company(name)}
+}
+
+
+ 

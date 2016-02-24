@@ -1,0 +1,102 @@
+
+<div>
+    <h2><span translate="psmar16App.clientAddress.detail.title">ClientAddress</span> {{clientAddress.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.addressLine1">AddressLine1</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.addressLine1}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.addressLine2">AddressLine2</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.addressLine2}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.suburb">Suburb</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.suburb}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.town">Town</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.town}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.city">City</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.city}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.postcode">Postcode</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.postcode}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.state">State</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.state}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.country">Country</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{clientAddress.country}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.type">Type</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'psmar16App.AddressType.' + clientAddress.type}}">{{clientAddress.type}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.clientAddress.client">client</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="client.detail({id:clientAddress.client.id})">{{clientAddress.client.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

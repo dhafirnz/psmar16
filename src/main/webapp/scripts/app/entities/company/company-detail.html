@@ -1,0 +1,104 @@
+
+<div>
+    <h2><span translate="psmar16App.company.detail.title">Company</span> {{company.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.code">Code</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.code}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.phone">Phone</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.phone}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.tollPhone">TollPhone</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.tollPhone}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.mobile">Mobile</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.mobile}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.email">Email</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.email}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.status">Status</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'psmar16App.CompanyStatus.' + company.status}}">{{company.status}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.startDate">StartDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.startDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.endDate">EndDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{company.endDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="psmar16App.company.Module">Module</span>
+                </td>
+                <td>
+                    <span ng-repeat="module in company.modules">
+                        <a class="form-control-static" ui-sref="module.detail({id: {{module.id}}})">{{module.name}}</a>{{$last ? '' : ', '}}
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

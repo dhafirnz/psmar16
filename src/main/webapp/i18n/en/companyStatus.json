@@ -1,0 +1,10 @@
+{
+    "psmar16App": {
+        "CompanyStatus" : {
+            "null": "",
+            "INACTIVE": "INACTIVE",
+            "ACTIVE": "ACTIVE",
+            "SUSPENDED": "SUSPENDED"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "psmar16App": {
+        "SaluteType" : {
+            "null": "",
+            "MR": "MR",
+            "MRS": "MRS",
+            "MISS": "MISS",
+            "MS": "MS"
+        }
+    }
+}

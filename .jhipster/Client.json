@@ -1,0 +1,82 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "address",
+      "otherEntityName": "clientAddress",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "client"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "company",
+      "otherEntityName": "company",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "name"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "salute",
+      "fieldType": "SaluteType",
+      "fieldValues": "MR,MRS,MISS,MS"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 30
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 30
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "phone",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 20
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "mobile",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 20
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength",
+        "minlength",
+        "pattern"
+      ],
+      "fieldValidateRulesMaxlength": 50,
+      "fieldValidateRulesMinlength": 5,
+      "fieldValidateRulesPattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+    }
+  ],
+  "changelogDate": "20160220023530",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

@@ -20,10 +20,10 @@ spring:
             enabled: false
     datasource:
         driver-class-name: org.postgresql.ds.PGSimpleDataSource
-        url: jdbc:postgresql://localhost:5432/psmar16
+        url: jdbc:postgresql://localhost:5432/ps1
         name:
-        username: psmar16
-        password:
+        username: ps
+        password: Hayur2016
     jpa:
         database-platform: nz.co.threepoints.ps.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL

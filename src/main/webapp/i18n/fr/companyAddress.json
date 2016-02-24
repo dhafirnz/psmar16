@@ -1,0 +1,32 @@
+{
+    "psmar16App": {
+        "companyAddress" : {
+            "home": {
+                "title": "CompanyAddresss",
+                "createLabel": "Créer un nouveau CompanyAddress",
+                "createOrEditLabel": "Créer ou éditer un CompanyAddress",
+                "search": "Search for CompanyAddress"
+            },
+            "created": "Un nouveau CompanyAddress a été créé avec l'identifiant {{ param }}",
+            "updated": "Le CompanyAddress avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le CompanyAddress avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le CompanyAddress {{ id }} ?"
+            },
+            "detail": {
+                "title": "CompanyAddress"
+            },
+            "addressLine1": "AddressLine1",
+            "addressLine2": "AddressLine2",
+            "suburb": "Suburb",
+            "town": "Town",
+            "city": "City",
+            "postcode": "Postcode",
+            "state": "State",
+            "country": "Country",
+            "type": "Type",
+            "company": "Company"
+        }
+    }
+}
+
