@@ -52,7 +52,6 @@ public class Client implements Serializable {
     private String mobile;
 
     @Size(min = 5, max = 50)
-    @Pattern(regexp = "undefined")
     @Column(name = "email", length = 50)
     private String email;
 

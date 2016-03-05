@@ -9,7 +9,7 @@ entity Module{
 
 /**
 * Company has M2M to Module, M2M to Address, O2M to Clients
-* 
+*
 */
 enum CompanyStatus {
 	INACTIVE, ACTIVE, SUSPENDED
@@ -20,7 +20,7 @@ enum AddressType{
 
 entity CompanyAddress {
 	addressLine1 String maxlength(100),
-	addressLine2 String maxlength(100),	
+	addressLine2 String maxlength(100),
 	suburb String maxlength(30),
 	town String maxlength(30),
 	city String  maxlength(30),
@@ -35,14 +35,14 @@ entity Company {
 	phone String required maxlength(20),
 	tollPhone String maxlength(20),
 	mobile String  maxlength(20),
-	email String maxlength(50) minlength(5) pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"),	
+	email String maxlength(50) minlength(5) pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"),
 	status CompanyStatus required,
 	startDate LocalDate required,
 	endDate LocalDate
 }
 
 relationship OneToMany {
-  Company{address} to CompanyAddress{company}
+  Company{address} to CompanyAddress{Company(name)}
 }
 
 relationship ManyToMany {
@@ -55,7 +55,7 @@ enum SaluteType{
 
 entity ClientAddress {
 	addressLine1 String maxlength(100),
-	addressLine2 String maxlength(100),	
+	addressLine2 String maxlength(100),
 	suburb String maxlength(30),
 	town String maxlength(30),
 	city String  maxlength(30),
@@ -68,8 +68,8 @@ entity ClientAddress {
 entity Client {
 	salute SaluteType,
 	firstName String  required maxlength(30),
-	lastName String  required maxlength(30),	
-	phone String required maxlength(20) ,	
+	lastName String  required maxlength(30),
+	phone String required maxlength(20) ,
 	mobile String maxlength(20) ,
 	email String maxlength(50) minlength(5) pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
 }
@@ -83,4 +83,3 @@ relationship OneToMany {
 }
 
 
- 

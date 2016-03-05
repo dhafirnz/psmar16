@@ -5,87 +5,14 @@
       "relationshipName": "company",
       "otherEntityName": "company",
       "relationshipType": "many-to-one",
-      "otherEntityField": "id"
+      "otherEntityField": "name"
     }
   ],
   "fields": [
     {
       "fieldId": 1,
-      "fieldName": "addressLine1",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 100
-    },
-    {
-      "fieldId": 2,
-      "fieldName": "addressLine2",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 100
-    },
-    {
-      "fieldId": 3,
-      "fieldName": "suburb",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 30
-    },
-    {
-      "fieldId": 4,
-      "fieldName": "town",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 30
-    },
-    {
-      "fieldId": 5,
-      "fieldName": "city",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 30
-    },
-    {
-      "fieldId": 6,
-      "fieldName": "postcode",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 8
-    },
-    {
-      "fieldId": 7,
-      "fieldName": "state",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 30
-    },
-    {
-      "fieldId": 8,
-      "fieldName": "country",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 30
-    },
-    {
-      "fieldId": 9,
-      "fieldName": "type",
-      "fieldType": "AddressType",
-      "fieldValues": "PHYSICAL_ADDRESS,POSTAL_ADDRESS,BILLING_ADDRESS"
+      "fieldName": "name",
+      "fieldType": "String"
     }
   ],
   "changelogDate": "20160220023527",

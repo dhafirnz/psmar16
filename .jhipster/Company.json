@@ -6,110 +6,13 @@
       "otherEntityName": "companyAddress",
       "relationshipType": "one-to-many",
       "otherEntityRelationshipName": "company"
-    },
-    {
-      "relationshipId": 2,
-      "relationshipName": "Module",
-      "otherEntityName": "module",
-      "relationshipType": "many-to-many",
-      "otherEntityField": "name",
-      "ownerSide": true
-    },
-    {
-      "relationshipId": 3,
-      "relationshipName": "client",
-      "otherEntityName": "client",
-      "relationshipType": "one-to-many",
-      "otherEntityRelationshipName": "company"
     }
   ],
   "fields": [
     {
       "fieldId": 1,
-      "fieldName": "code",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "required",
-        "maxlength",
-        "minlength"
-      ],
-      "fieldValidateRulesMaxlength": 20,
-      "fieldValidateRulesMinlength": 5
-    },
-    {
-      "fieldId": 2,
       "fieldName": "name",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "required",
-        "maxlength",
-        "minlength"
-      ],
-      "fieldValidateRulesMaxlength": 100,
-      "fieldValidateRulesMinlength": 5
-    },
-    {
-      "fieldId": 3,
-      "fieldName": "phone",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "required",
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 20
-    },
-    {
-      "fieldId": 4,
-      "fieldName": "tollPhone",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 20
-    },
-    {
-      "fieldId": 5,
-      "fieldName": "mobile",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength"
-      ],
-      "fieldValidateRulesMaxlength": 20
-    },
-    {
-      "fieldId": 6,
-      "fieldName": "email",
-      "fieldType": "String",
-      "fieldValidateRules": [
-        "maxlength",
-        "minlength",
-        "pattern"
-      ],
-      "fieldValidateRulesMaxlength": 50,
-      "fieldValidateRulesMinlength": 5,
-      "fieldValidateRulesPattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
-    },
-    {
-      "fieldId": 7,
-      "fieldName": "status",
-      "fieldType": "CompanyStatus",
-      "fieldValues": "INACTIVE,ACTIVE,SUSPENDED",
-      "fieldValidateRules": [
-        "required"
-      ]
-    },
-    {
-      "fieldId": 8,
-      "fieldName": "startDate",
-      "fieldType": "LocalDate",
-      "fieldValidateRules": [
-        "required"
-      ]
-    },
-    {
-      "fieldId": 9,
-      "fieldName": "endDate",
-      "fieldType": "LocalDate"
+      "fieldType": "String"
     }
   ],
   "changelogDate": "20160220023528",

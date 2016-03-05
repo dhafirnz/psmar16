@@ -32,42 +32,41 @@ public class Company implements Serializable {
     @Size(min = 5, max = 20)
     @Column(name = "code", length = 20, nullable = false)
     private String code;
-    
+
     @NotNull
     @Size(min = 5, max = 100)
     @Column(name = "name", length = 100, nullable = false)
     private String name;
-    
+
     @NotNull
     @Size(max = 20)
     @Column(name = "phone", length = 20, nullable = false)
     private String phone;
-    
+
     @Size(max = 20)
     @Column(name = "toll_phone", length = 20)
     private String tollPhone;
-    
+
     @Size(max = 20)
     @Column(name = "mobile", length = 20)
     private String mobile;
-    
+
     @Size(min = 5, max = 50)
-    @Pattern(regexp = "undefined")
     @Column(name = "email", length = 50)
     private String email;
-    
+
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private CompanyStatus status;
-    
+
     @NotNull
     @Column(name = "start_date", nullable = false)
     private LocalDate startDate;
-    
+
     @Column(name = "end_date")
     private LocalDate endDate;
-    
+
     @OneToMany(mappedBy = "company")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -96,7 +95,7 @@ public class Company implements Serializable {
     public String getCode() {
         return code;
     }
-    
+
     public void setCode(String code) {
         this.code = code;
     }
@@ -104,7 +103,7 @@ public class Company implements Serializable {
     public String getName() {
         return name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
@@ -112,7 +111,7 @@ public class Company implements Serializable {
     public String getPhone() {
         return phone;
     }
-    
+
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -120,7 +119,7 @@ public class Company implements Serializable {
     public String getTollPhone() {
         return tollPhone;
     }
-    
+
     public void setTollPhone(String tollPhone) {
         this.tollPhone = tollPhone;
     }
@@ -128,7 +127,7 @@ public class Company implements Serializable {
     public String getMobile() {
         return mobile;
     }
-    
+
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
@@ -136,7 +135,7 @@ public class Company implements Serializable {
     public String getEmail() {
         return email;
     }
-    
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -144,7 +143,7 @@ public class Company implements Serializable {
     public CompanyStatus getStatus() {
         return status;
     }
-    
+
     public void setStatus(CompanyStatus status) {
         this.status = status;
     }
@@ -152,7 +151,7 @@ public class Company implements Serializable {
     public LocalDate getStartDate() {
         return startDate;
     }
-    
+
     public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
@@ -160,7 +159,7 @@ public class Company implements Serializable {
     public LocalDate getEndDate() {
         return endDate;
     }
-    
+
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }

@@ -6,7 +6,7 @@
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="clientAddress.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span 
+                    <span
 class="hidden-xs"                        translate="psmar16App.clientAddress.home.createLabel">Create new ClientAddress
                     </span>
                 </button>
@@ -57,13 +57,13 @@ class="hidden-xs"                        translate="psmar16App.clientAddress.hom
                     <td>{{clientAddress.country}}</td>
                     <td translate="{{'psmar16App.AddressType.' + clientAddress.type}}">{{clientAddress.type}}</td>
                     <td>
-                        <a ui-sref="client.detail({id:clientAddress.client.id})">{{clientAddress.client.id}}</a>
+                        <a ui-sref="client.detail({id:clientAddress.client.id})">{{clientAddress.client.fullName}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
                                     ui-sref="clientAddress.detail({id:clientAddress.id})"
-                                    class="btn btn-info btn-sm"> 
+                                    class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
                             </button>
@@ -75,7 +75,7 @@ class="hidden-xs"                        translate="psmar16App.clientAddress.hom
                             </button>
                             <button type="submit"
                                     ui-sref="clientAddress.delete({id:clientAddress.id})"
-                                    class="btn btn-danger btn-sm">                                    
+                                    class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
                             </button>

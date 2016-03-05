@@ -32,13 +32,13 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class ClientResource {
 
     private final Logger log = LoggerFactory.getLogger(ClientResource.class);
-        
+
     @Inject
     private ClientRepository clientRepository;
-    
+
     @Inject
     private ClientSearchRepository clientSearchRepository;
-    
+
     /**
      * POST  /clients -> Create a new client.
      */
