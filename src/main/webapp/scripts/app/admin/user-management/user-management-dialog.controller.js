@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('psmar16App').controller('UserManagementDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'User', 'Language',
-        function($scope, $stateParams, $uibModalInstance, entity, User, Language) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'User', 'Company', 'Language',
+        function($scope, $stateParams, $uibModalInstance, entity, User, Company, Language) {
 
         $scope.user = entity;
+        $scope.companies = Company.query();
         $scope.authorities = ["ROLE_USER", "ROLE_ADMIN"];
         Language.getAll().then(function (languages) {
             $scope.languages = languages;

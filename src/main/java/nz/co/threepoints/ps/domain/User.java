@@ -36,7 +36,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     @JsonIgnore
     @NotNull
-    @Size(min = 60, max = 60) 
+    @Size(min = 60, max = 60)
     @Column(name = "password_hash",length = 60)
     private String password;
 
@@ -71,6 +71,14 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     @Column(name = "reset_date", nullable = true)
     private ZonedDateTime resetDate = null;
+
+    @ManyToMany
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    @JoinTable(name = "company_user",
+        joinColumns = @JoinColumn(name="user_id", referencedColumnName="ID"),
+        inverseJoinColumns = @JoinColumn(name="company_id", referencedColumnName="ID"))
+    private Set<Company> companys = new HashSet<>();
+
 
     @JsonIgnore
     @ManyToMany
@@ -175,6 +183,14 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     public void setAuthorities(Set<Authority> authorities) {
         this.authorities = authorities;
+    }
+
+    public Set<Company> getCompanys() {
+        return companys;
+    }
+
+    public void setCompanys(Set<Company> companys) {
+        this.companys = companys;
     }
 
     @Override

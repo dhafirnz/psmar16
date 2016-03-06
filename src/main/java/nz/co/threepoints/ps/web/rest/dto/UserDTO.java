@@ -1,11 +1,13 @@
 package nz.co.threepoints.ps.web.rest.dto;
 
 import nz.co.threepoints.ps.domain.Authority;
+import nz.co.threepoints.ps.domain.Company;
 import nz.co.threepoints.ps.domain.User;
 
 import org.hibernate.validator.constraints.Email;
 
 import javax.validation.constraints.*;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 /**
@@ -42,6 +44,10 @@ public class UserDTO {
 
     private Set<String> authorities;
 
+    private Set<Company> companys = new HashSet<>();
+
+
+
     public UserDTO() {
     }
 
@@ -49,11 +55,12 @@ public class UserDTO {
         this(user.getLogin(), null, user.getFirstName(), user.getLastName(),
             user.getEmail(), user.getActivated(), user.getLangKey(),
             user.getAuthorities().stream().map(Authority::getName)
-                .collect(Collectors.toSet()));
+                .collect(Collectors.toSet()),
+            user.getCompanys());
     }
 
     public UserDTO(String login, String password, String firstName, String lastName,
-        String email, boolean activated, String langKey, Set<String> authorities) {
+        String email, boolean activated, String langKey, Set<String> authorities, Set<Company>companys) {
 
         this.login = login;
         this.password = password;
@@ -63,6 +70,7 @@ public class UserDTO {
         this.activated = activated;
         this.langKey = langKey;
         this.authorities = authorities;
+        this.companys = companys;
     }
 
     public String getPassword() {
@@ -95,6 +103,14 @@ public class UserDTO {
 
     public Set<String> getAuthorities() {
         return authorities;
+    }
+
+    public Set<Company> getCompanys() {
+        return companys;
+    }
+
+    public void setCompanys(Set<Company> companys) {
+        this.companys = companys;
     }
 
     @Override

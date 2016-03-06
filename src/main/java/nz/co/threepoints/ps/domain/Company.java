@@ -79,6 +79,11 @@ public class Company implements Serializable {
                inverseJoinColumns = @JoinColumn(name="modules_id", referencedColumnName="ID"))
     private Set<Module> modules = new HashSet<>();
 
+    @ManyToMany(mappedBy = "companys")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<User> users = new HashSet<>();
+
     @OneToMany(mappedBy = "company")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -186,6 +191,14 @@ public class Company implements Serializable {
 
     public void setClients(Set<Client> clients) {
         this.clients = clients;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 
     @Override
