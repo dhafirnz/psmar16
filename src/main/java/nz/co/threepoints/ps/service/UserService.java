@@ -173,6 +173,7 @@ public class UserService {
     public Optional<User> getUserWithAuthoritiesByLogin(String login) {
         return userRepository.findOneByLogin(login).map(u -> {
             u.getAuthorities().size();
+            u.getCompanys().size();
             return u;
         });
     }
