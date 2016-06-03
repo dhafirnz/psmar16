@@ -189,6 +189,7 @@ public class UserService {
     public User getUserWithAuthorities() {
         User user = userRepository.findOneByLogin(SecurityUtils.getCurrentUser().getUsername()).get();
         user.getAuthorities().size(); // eagerly load the association
+        user.getCompanys().size(); // eagerly load the association
         return user;
     }
 
